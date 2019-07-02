@@ -1,8 +1,6 @@
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+
+import java.sql.*;
 
 public class ConnectionDriver {
     private static String USERNAME ="u0309_user";
@@ -19,7 +17,11 @@ public class ConnectionDriver {
                 DriverManager.registerDriver(driver);
                 connection=DriverManager.getConnection(URL, USERNAME, PASSWORD);
                 if(!connection.isClosed()){
-                    System.out.println("Соединение с БД Установлено");
+                    Statement statement=connection.createStatement();
+                    statement.addBatch("insert into u0309472_iba.resorts (resort_name, resort_description) values (\"Греция\", \"Афины, отель 5*\")");
+                    statement.executeBatch();
+                    statement.clearBatch();
+                    System.out.println("Данные внесены");
                 }
                 connection.close();
                 if(connection.isClosed()){
