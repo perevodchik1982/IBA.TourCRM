@@ -13,9 +13,9 @@ public class LeftMenue extends StackPane {
         rootItem.setExpanded(true);
 
         TreeItem<String> clientsItem = new TreeItem<String>("Клиенты");
+        TreeItem<String> resortsItem = new TreeItem<String>("Курорты");
         TreeItem<String> toursItem = new TreeItem<String>("Туры");
-
-        rootItem.getChildren().addAll(clientsItem, toursItem);
+        rootItem.getChildren().addAll(clientsItem, resortsItem, toursItem);
 
         mTreeView = new TreeView<>(rootItem);
         this.getChildren().add(mTreeView);
