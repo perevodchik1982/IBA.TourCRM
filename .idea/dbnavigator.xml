@@ -16,18 +16,23 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1251" />
+      <charset value="windows-1252" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="18265963-7656-4a84-83ed-c5db7a41e59d">
+        <schema name="u0309472_iba" object-types="function, dataset trigger, index, procedure, view, constraint, column, table" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="18265963-7656-4a84-83ed-c5db7a41e59d">
       <console name="Connection" type="STANDARD" schema="" session="Main" />
+      <console name="u0309472_iba" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -61,11 +66,11 @@
     <connections>
       <connection id="18265963-7656-4a84-83ed-c5db7a41e59d" active="true">
         <database>
-          <name value="Connection" />
+          <name value="u0309472_iba" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="5.7" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
@@ -73,13 +78,17 @@
           <host value="spl58.hosting.reg.ru" />
           <port value="3306" />
           <database value="u0309472_iba" />
-          <os-authentication value="false" />
-          <empty-authentication value="false" />
+          <type value="USER_PASSWORD" />
           <user value="u0309_user" />
-          <deprecated-pwd value="c3lzZW0wMDA=" />
+          <deprecated-pwd value="c3lzdGVtMDAw" />
         </database>
         <properties>
           <auto-commit value="false" />
+          <properties>
+            <property key="useJDBCCompliantTimezoneShift" value="true" />
+            <property key="serverTimezone" value="UTC" />
+            <property key="useLegacyDatetimeCode" value="false" />
+          </properties>
         </properties>
         <ssh-settings>
           <active value="false" />
@@ -112,7 +121,7 @@
           <max-connection-pool-size value="7" />
           <alternative-statement-delimiter value="" />
         </details>
-        <object-filters hide-empty-schemas="false">
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
           <object-type-filter use-master-settings="true">
             <object-type name="SCHEMA" enabled="true" />
             <object-type name="USER" enabled="true" />
