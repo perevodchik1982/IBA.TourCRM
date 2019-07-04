@@ -17,13 +17,14 @@ launch(args);
               controller.start(primaryStage);
               ConnectionDriver connectionDriver = new ConnectionDriver(); //test connection
               //to do
-              //Database architecture - Phil
+              //Database architecture - Phil done
               //data input - Vlad
               //tours collections - Vlad
               //clients collections - Vlad
               //saving collections to database - Phil
               //database queries - Phil
               //displaying results of database queries - Phil
+
 
        }
 }
