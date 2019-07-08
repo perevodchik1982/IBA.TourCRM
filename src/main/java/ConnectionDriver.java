@@ -8,7 +8,7 @@ public class ConnectionDriver {
     private static String URL ="jdbc:mysql://spl58.hosting.reg.ru:3306/u0309472_iba?autoReconnect=true&useSSL=false";
 
 
- //   public static void main(String[] args){
+ public static void main(String[] args){
         Connection connection;
         Driver driver;
         {
@@ -32,4 +32,4 @@ public class ConnectionDriver {
             }
     }
 }
-//}
+}

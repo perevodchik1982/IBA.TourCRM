@@ -15,7 +15,7 @@ launch(args);
        public void start(Stage primaryStage) throws Exception {
               Controller controller = new Controller();
               controller.start(primaryStage);
-              ConnectionDriver connectionDriver = new ConnectionDriver(); //test connection
+              // ConnectionDriver connectionDriver = new ConnectionDriver(); // /test connection
               //to do
               //Database architecture - Phil done
               //data input - Vlad
