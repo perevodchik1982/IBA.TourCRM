@@ -8,7 +8,7 @@ public class ConnectionDriver {
     private static String URL ="jdbc:mysql://spl58.hosting.reg.ru:3306/u0309472_iba?autoReconnect=true&useSSL=false";
 
 
- //   public static void main(String[] args){
+public static void main(String[] args){
         Connection connection;
         Driver driver;
         {
@@ -18,10 +18,11 @@ public class ConnectionDriver {
                 connection=DriverManager.getConnection(URL, USERNAME, PASSWORD);
                 if(!connection.isClosed()){
                     Statement statement=connection.createStatement();
-                    statement.addBatch("insert into u0309472_iba.resorts (resort_name, resort_description) values (\"Греция\", \"Афины, отель 5*\")");
-                    statement.executeBatch();
-                    statement.clearBatch();
-                    System.out.println("Данные внесены");
+                    System.out.println("Соединение с БД установлено");
+                    //statement.addBatch("insert into u0309472_iba.resorts (resort_name, resort_description) values (\"Греция\", \"Афины, отель 5*\")");
+                    //statement.executeBatch();
+                    //statement.clearBatch();
+                    //System.out.println("Данные внесены");
                 }
                 connection.close();
                 if(connection.isClosed()){
@@ -32,4 +33,4 @@ public class ConnectionDriver {
             }
     }
 }
-//}
+}
