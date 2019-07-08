@@ -3,7 +3,7 @@ package DataInput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+// Data input
 public class Main {
     public static List<ClientsInput> itemData = new ArrayList<>();
     public static void main(String[] args) {
